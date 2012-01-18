@@ -6,5 +6,7 @@
 
     <include layout="@layout/header"/>
     <include layout="@layout/search_bar"/>
+    
+    
 
 </LinearLayout>
