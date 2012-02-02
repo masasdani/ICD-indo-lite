@@ -7,6 +7,20 @@
     <include layout="@layout/header"/>
     <include layout="@layout/search_bar"/>
     
+    <ListView 
+        android:id="@+id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="gone" >
+    </ListView>
     
+    <ImageView 
+        android:id="@+id/fkm"
+        android:src="@drawable/fkm"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:paddingLeft="10sp"
+        android:paddingRight="10sp"
+        android:background="#fff" />
 
 </LinearLayout>
