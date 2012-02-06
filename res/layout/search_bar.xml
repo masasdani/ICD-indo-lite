@@ -2,7 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
 	android:id = "@+id/RelLayout"
 	android:layout_width = "fill_parent"
-	android:layout_height = "wrap_content">
+	android:layout_height = "wrap_content"
+	android:background="@color/search_color">
 	    
 	    	<TextView 
 		    	android:layout_width="fill_parent"
@@ -20,7 +21,7 @@
 	    		android:layout_height="wrap_content"
 	    		android:layout_alignRight="@+id/title" />
 	   			    
-	    	<EditText
+	    	<AutoCompleteTextView
 	    		android:layout_toLeftOf="@+id/ok"
 	    		android:id="@+id/entry"
 	    		android:layout_height="wrap_content"
@@ -29,5 +30,6 @@
 	    		android:layout_width="match_parent" 
 	    		android:maxLines="1" 
 	    		android:inputType="textWebEditText">
-	    	</EditText>
+	    	</AutoCompleteTextView>
+	    	
 </RelativeLayout>

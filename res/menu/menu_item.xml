@@ -4,25 +4,29 @@
     <item 
         android:id="@+id/setting"
         android:icon="@drawable/setting"
-        android:title="Setting" />
+        android:title="Setting">
+        
+        <menu >
+            <group android:checkableBehavior="single">
+                <item 
+                    android:id="@+id/lang_in"
+                    android:title="Bahasa Indonesia"
+                    android:enabled="true"></item>
+                <item 
+                    android:id="@+id/lang_en"
+                    android:title="English"
+                    android:enabled="true"></item>
+            </group>
+        </menu>
+        
+    </item>
     
     <item 
         android:id="@+id/about"
-        android:icon="@drawable/help"/>
-    
-    <group 
-        android:id="@+id/language"
-        android:checkableBehavior="single"
+        android:icon="@drawable/help"
+        android:title="About"
+        android:enabled="true"
         >
-        
-        <item 
-            android:id="@+id/lang_en"
-            android:title="English"
-            ></item>
-        <item 
-            android:id="@+id/lang_id"
-            android:title="@+id/lang_id">
-        </item>
-    </group>
+    </item>
 
 </menu>

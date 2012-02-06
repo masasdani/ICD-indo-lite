@@ -71,4 +71,17 @@ public class PenyakitDaoImpl implements PenyakitDao{
 		return list;
 	}
 
+	@Override
+	public String[] getSuggestion(String language) {
+		Cursor cursor=database.rawQuery("select * from Penyakit", null);
+		cursor.moveToFirst();
+		String[] data = new String[cursor.getCount()];
+		int i = 0;
+		while(cursor.moveToNext()){
+			data[i] = language == "EN" ? cursor.getString(6) : cursor.getString(5);
+			i++;
+		}
+		return data;
+	}
+
 }
