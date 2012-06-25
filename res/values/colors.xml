@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-<color name="header_color">#0075c7</color>
-<color name="search_color">#0088cc</color>    
+<color name="header_color">#d3bc5f</color>
+<color name="search_color">#ffe680</color>    
+<color name="list_color">#ffffff</color>    
 </resources>

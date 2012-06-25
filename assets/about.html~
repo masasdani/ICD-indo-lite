@@ -30,7 +30,8 @@ and open the template in the editor.
         </div>
         <div id="content">
             <p>
-                International Classification of  Decease dibuat untuk memudahkan perekam medis atau petugas rumah sakit dalam menentukan kode penyakit. Aplikasi ini dibuat dalam 2 bahasa yaitu bahasa indonesia dan bahasa inggris. Pengguna hanya perlu mencari kata kunci yang terdapat pada kolom pencarian maka secara otomatis penyakit yang berhubungan dengan kata tersebut akan dimunculkan sebagai hasil. Database yang ada di aplikasi ini masih sebanyak 3 digit. Pada release selanjutnya akan dibuat database dalam 5 digit dan tools penunjang lainnya. 
+                Software ini dibuat untuk memudahkan pencarian kode penyakit, digunakan untuk rekam medis dan pekerja rumah sakit.
+                Data disajikan dengan 2 pilihan bahasa yaitu indonesia dan bahasa inggris.
             </p>
         </div>
         

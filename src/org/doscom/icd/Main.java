@@ -22,7 +22,6 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.Toast;
 
 public class Main extends ListActivity {
@@ -38,7 +37,6 @@ public class Main extends ListActivity {
 	
 	private AutoCompleteTextView editText;
 	private ImageButton button;
-	private ImageView imageView;
 	
 	private final String PARAMETER = "language";
 	
@@ -46,6 +44,7 @@ public class Main extends ListActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
+        
         sharedPreferences = getSharedPreferences("icd.conf", MODE_PRIVATE);
         if(!sharedPreferences.contains(PARAMETER)){
 			Editor editor = sharedPreferences.edit();
@@ -80,7 +79,6 @@ public class Main extends ListActivity {
 	private void initView() {
 		editText =  (AutoCompleteTextView) findViewById(R.id.entry);
 		button = (ImageButton) findViewById(R.id.ok);
-		imageView = (ImageView) findViewById(R.id.fkm);
 		
 		ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, R.layout.suggestion, suggestion);
 		editText.setAdapter(arrayAdapter);
@@ -90,7 +88,6 @@ public class Main extends ListActivity {
 			@Override
 			public void onClick(View v) {
 				getData();
-				imageView.setVisibility(View.GONE);
 				getListView().setVisibility(View.VISIBLE);
 			}
 		});

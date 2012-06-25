@@ -18,7 +18,7 @@ public class PenyakitDaoImpl implements PenyakitDao{
 	@Override
 	public List<Penyakit> getAll() {
 		List<Penyakit> list=new ArrayList<Penyakit>();
-		Cursor cursor=database.rawQuery("select * from Penyakit", null);
+		Cursor cursor=database.rawQuery("select * from penyakit", null);
 		cursor.moveToFirst();
 		for(;!cursor.isAfterLast();cursor.moveToNext()){
 			Penyakit p= new Penyakit(cursor.getString(0),
@@ -35,7 +35,7 @@ public class PenyakitDaoImpl implements PenyakitDao{
 
 	@Override
 	public Penyakit getPenyakitById(String kode) {
-		Cursor cursor=database.rawQuery("select * from Penyakit", null);
+		Cursor cursor=database.rawQuery("select * from penyakit", null);
 		return new Penyakit(cursor.getString(0), 
 				cursor.getString(1),
 				cursor.getString(2),
@@ -50,7 +50,7 @@ public class PenyakitDaoImpl implements PenyakitDao{
 		List<Penyakit> list=new ArrayList<Penyakit>();
 		String s = "%"+cari+"%";
 		String[] args={s,s,s,s,s,s};
-		Cursor cursor=database.rawQuery("select * from Penyakit where " +
+		Cursor cursor=database.rawQuery("select * from penyakit where " +
 				"kategori_utama_en like ? " +
 				"or kategori_utama_id like ? " +
 				"or kategori_id like ? " +
@@ -73,7 +73,7 @@ public class PenyakitDaoImpl implements PenyakitDao{
 
 	@Override
 	public String[] getSuggestion(String language) {
-		Cursor cursor=database.rawQuery("select * from Penyakit", null);
+		Cursor cursor=database.rawQuery("select * from penyakit", null);
 		cursor.moveToFirst();
 		String[] data = new String[cursor.getCount()];
 		int i = 0;

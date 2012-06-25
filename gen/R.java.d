@@ -1,0 +1,25 @@
+/home/share/workspace/Project/ICD10-Indo/gen/org/doscom/icd/R.java \
+ : /home/share/workspace/Project/ICD10-Indo/res/drawable-hdpi/icon.png \
+/home/share/workspace/Project/ICD10-Indo/res/drawable-ldpi/icon.png \
+/home/share/workspace/Project/ICD10-Indo/res/menu/menu_item.xml \
+/home/share/workspace/Project/ICD10-Indo/res/drawable-mdpi/icon.png \
+/home/share/workspace/Project/ICD10-Indo/res/layout/splash.xml \
+/home/share/workspace/Project/ICD10-Indo/res/layout/suggestion.xml \
+/home/share/workspace/Project/ICD10-Indo/res/layout/about.xml \
+/home/share/workspace/Project/ICD10-Indo/res/layout/header.xml \
+/home/share/workspace/Project/ICD10-Indo/res/layout/main.xml \
+/home/share/workspace/Project/ICD10-Indo/res/layout/item.xml \
+/home/share/workspace/Project/ICD10-Indo/res/layout/search_bar.xml \
+/home/share/workspace/Project/ICD10-Indo/res/values/strings.xml \
+/home/share/workspace/Project/ICD10-Indo/res/values/colors.xml \
+/home/share/workspace/Project/ICD10-Indo/res/drawable/help.png \
+/home/share/workspace/Project/ICD10-Indo/res/drawable/splash.jpg \
+/home/share/workspace/Project/ICD10-Indo/res/drawable/cari.png \
+/home/share/workspace/Project/ICD10-Indo/res/drawable/setting.png \
+/home/share/workspace/Project/ICD10-Indo/bin/res/drawable-hdpi/icon.png \
+/home/share/workspace/Project/ICD10-Indo/bin/res/drawable-ldpi/icon.png \
+/home/share/workspace/Project/ICD10-Indo/bin/res/drawable-mdpi/icon.png \
+/home/share/workspace/Project/ICD10-Indo/bin/res/drawable/help.png \
+/home/share/workspace/Project/ICD10-Indo/bin/res/drawable/cari.png \
+/home/share/workspace/Project/ICD10-Indo/bin/res/drawable/setting.png \
+/home/share/workspace/Project/ICD10-Indo/AndroidManifest.xml \
