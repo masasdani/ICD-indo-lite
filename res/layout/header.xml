@@ -9,7 +9,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:textSize="20dip"
-        android:text="International Clasification of Decease (ICD)"
+        android:text="International Classification of Decease (ICD)"
         android:textStyle="bold"
         android:layout_gravity="center_vertical"/>
 
