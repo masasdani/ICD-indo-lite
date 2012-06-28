@@ -12,8 +12,18 @@
         android:id="@+id/android:list"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:background="@color/list_color"
-        android:visibility="gone" >
+        android:background="@color/list_color" 
+        android:visibility="gone"
+        android:layout_weight="1">
     </ListView>
-
+    
+    <TextView 
+        android:id="@+id/textKosong"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#00000000"
+        android:layout_weight="1"/>
+	
+    <include layout="@layout/footer"/>
+    
 </LinearLayout>

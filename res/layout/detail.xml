@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+	<include layout="@layout/header"/>
+	
+	<LinearLayout 
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:layout_weight="1"
+	    android:orientation="vertical">
+	    
+		<TextView 
+		    android:id="@+id/kode"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:textSize="40dip"
+		    android:textStyle="bold"
+		    android:gravity="center_horizontal"/>
+		
+		<TextView 
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:textSize="16dip"
+		    android:textStyle="bold"
+		    android:text="@string/english"
+		    android:paddingTop="16dip"
+		    android:gravity="center_horizontal"/>
+		
+		<TextView 
+		    android:id="@+id/kategori_utama_en"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:gravity="center_horizontal"/>
+		
+		<TextView 
+		    android:id="@+id/kategori_en"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:gravity="center_horizontal"/>
+		
+		<TextView 
+		    android:id="@+id/penyakit_en"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:gravity="center_horizontal"/>
+		
+		<TextView 
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:textSize="16dip"
+		    android:textStyle="bold"
+		    android:text="@string/indonesia"
+		    android:paddingTop="16dip"
+		    android:gravity="center_horizontal"/>
+
+		<TextView 
+		    android:id="@+id/kategori_utama_id"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:gravity="center_horizontal"/>
+		
+		<TextView 
+		    android:id="@+id/kategori_id"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:gravity="center_horizontal"/>
+		
+		<TextView 
+		    android:id="@+id/penyakit_id"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:gravity="center_horizontal"/>
+	</LinearLayout>	
+	
+	<include layout="@layout/footer"/>
+</LinearLayout>

@@ -19,12 +19,16 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
+import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
-public class Main extends ListActivity {
+public class Main extends ListActivity implements OnClickListener{
     
 	private DatabaseHelper databaseHelper;
 	private SQLiteDatabase database;
@@ -37,6 +41,8 @@ public class Main extends ListActivity {
 	
 	private AutoCompleteTextView editText;
 	private ImageButton button;
+	private Button menu;
+	private TextView textKosong;
 	
 	private final String PARAMETER = "language";
 	
@@ -65,6 +71,23 @@ public class Main extends ListActivity {
 		initView();
 	}
 	
+	@Override
+	protected void onListItemClick(ListView l, View v, int position, long id) {
+		super.onListItemClick(l, v, position, id);
+		Penyakit penyakit = list.get(position);
+		Bundle bundle = new Bundle();
+		bundle.putString("kode", penyakit.getKode());
+		bundle.putString("kategori_utama_en", penyakit.getKategoriUtamaEn());
+		bundle.putString("kategori_utama_id", penyakit.getKategoriUtamaId());
+		bundle.putString("kategori_en", penyakit.getKategoriEn());
+		bundle.putString("kategori_id", penyakit.getKategoriId());
+		bundle.putString("penyakit_en", penyakit.getPenyakitEn());
+		bundle.putString("penyakit_id", penyakit.getPenyakitId());
+		Intent intent = new Intent(this, Detail.class);
+		intent.putExtras(bundle);
+		startActivity(intent);
+	}
+	
 	private void getData() {
 		String cari = editText.getText().toString();
 		language = sharedPreferences.getString(PARAMETER, null);
@@ -78,19 +101,14 @@ public class Main extends ListActivity {
 
 	private void initView() {
 		editText =  (AutoCompleteTextView) findViewById(R.id.entry);
-		button = (ImageButton) findViewById(R.id.ok);
-		
+		textKosong = (TextView) findViewById(R.id.textKosong);
 		ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, R.layout.suggestion, suggestion);
 		editText.setAdapter(arrayAdapter);
 		
-		button.setOnClickListener(new View.OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				getData();
-				getListView().setVisibility(View.VISIBLE);
-			}
-		});
+		button = (ImageButton) findViewById(R.id.ok);
+		button.setOnClickListener(this);
+		menu = (Button) findViewById(R.id.menu);
+		menu.setOnClickListener(this);
 	}
 	
 	@Override
@@ -143,5 +161,23 @@ public class Main extends ListActivity {
 	protected void onDestroy() {
 		super.onDestroy();
 		database.close();
+	}
+
+	@Override
+	public void onClick(View arg0) {
+		switch (arg0.getId()) {
+		case R.id.menu:
+			openOptionsMenu();
+			break;
+		
+		case R.id.ok:
+			getData();
+			textKosong.setVisibility(View.GONE);
+			getListView().setVisibility(View.VISIBLE);
+			break;
+			
+		default:
+			break;
+		}
 	}
 }
